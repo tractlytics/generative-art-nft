@@ -46,14 +46,14 @@ CONFIG = [
         'id': 4,
         'name': 'head_gear',
         'directory': 'Head Gear',
-        'required': True,
+        'required': False,
         'rarity_weights': None,
     },
     {
         'id': 5,
         'name': 'clothes',
         'directory': 'Shirt',
-        'required': True,
+        'required': False,
         'rarity_weights': None,
     },
     {
@@ -74,7 +74,7 @@ CONFIG = [
         'id': 8,
         'name': 'wristband',
         'directory': 'Wristband',
-        'required': True,
+        'required': False,
         'rarity_weights': None,
     },
 ]

@@ -1,0 +1,16 @@
+# To use:
+#   $ conda env create -f env_cv.yml
+#   $ conda activate cv
+name: generative_art_nft
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - ipywidgets
+#    - torch
+#    - torchvision
+#    - torchsummary
+#    - matplotlib
+    - Pillow 
+    - pandas 
+    - progressbar2
