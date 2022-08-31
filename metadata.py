@@ -30,7 +30,7 @@ def generate_paths(edition_name):
     
     #DLI
     #edition_path = os.path.join('output', 'edition ' + str(edition_name))
-    edition_path = os.path.join('output', 'edition' + str(edition_name)) #DO NOT INCLUED 'Edition prefix'
+    edition_path = os.path.join('output', 'edition' + str(edition_name)) #DO NOT INCLUED 'Edition prefix, nclued al character after, including spaces'
     metadata_path = os.path.join(edition_path, 'metadata.csv')
     json_path = os.path.join(edition_path, 'json')
 
