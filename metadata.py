@@ -14,12 +14,12 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 
 # Base metadata. MUST BE EDITED.
-BASE_IMAGE_URL = "ipfs://<-- Your CID Code-->"
-BASE_NAME = ""
+BASE_IMAGE_URL = "ipfs://QmWDep86Ae3edGFkcZU5JbSJEAoVgfz7H5y65iKBhTybvY"
+BASE_NAME = "Scrappy Squirrel #"
 
 BASE_JSON = {
     "name": BASE_NAME,
-    "description": "",
+    "description": "test for nft generation",
     "image": BASE_IMAGE_URL,
     "attributes": [],
 }
@@ -27,7 +27,10 @@ BASE_JSON = {
 
 # Get metadata and JSON files path based on edition
 def generate_paths(edition_name):
-    edition_path = os.path.join('output', 'edition ' + str(edition_name))
+    
+    #DLI
+    #edition_path = os.path.join('output', 'edition ' + str(edition_name))
+    edition_path = os.path.join('output', 'edition' + str(edition_name)) #DO NOT INCLUED 'Edition prefix'
     metadata_path = os.path.join(edition_path, 'metadata.csv')
     json_path = os.path.join(edition_path, 'json')
 
@@ -70,6 +73,12 @@ def main():
         edition_name = input()
         edition_path, metadata_path, json_path = generate_paths(edition_name)
 
+        print('Edition name variable DI:' + str(edition_name))
+        print('Edition_path:' + ' ' + str(edition_path) )
+        print('metadata_path:' + ' ' + str(metadata_path) )
+        print('jsonpath:' + ' ' + str(json_path) )
+        print('\n')
+        
         if os.path.exists(edition_path):
             print("Edition exists! Generating JSON metadata...")
             break
