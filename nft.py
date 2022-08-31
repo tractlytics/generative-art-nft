@@ -30,6 +30,9 @@ def parse_config():
         # Go into assets/ to look for layer folders
         layer_path = os.path.join(assets_path, layer['directory'])
         
+        # print(layer)
+        # print(layer_path)
+        
         # Get trait array in sorted order
         traits = sorted([trait for trait in os.listdir(layer_path) if trait[0] != '.'])
 
@@ -69,7 +72,7 @@ def generate_single_image(filepaths, output_filename=None):
     # Loop through layers 1 to n and stack them on top of another
     for filepath in filepaths[1:]:
         if filepath.endswith('.png'):
-            print('filepath')
+            #print(filepath)
             img = Image.open(os.path.join('assets', filepath))
             bg.paste(img, (0,0), img)
     
@@ -82,8 +85,8 @@ def generate_single_image(filepaths, output_filename=None):
             os.makedirs(os.path.join('output', 'single_images'))
         bg.save(os.path.join('output', 'single_images', str(int(time.time())) + '.png'))
 
-
-# Generate a single image with all possible traits
+#show all possible traits
+#Generate a single image with all possible traits
 # generate_single_image(['Background/green.png', 
 #                        'Body/brown.png', 
 #                        'Expressions/standard.png',
